@@ -11,6 +11,7 @@ import MyAppointment from './pages/MyAppointment'
 import Navbar from './components/Navbar'
 import Header from './components/Header'
 import Footer from './components/Footer'
+import Appointment from './pages/Appointment'
 
 const App = () => {
   return (
@@ -20,16 +21,17 @@ const App = () => {
       <Routes>
         <Route path='/' element={<Home />}/>
         <Route path='/doctors' element={<Doctors />}/>
-        <Route path='/dotors/:speciality' element={<Doctors/>}/>
+        <Route path='/doctors/:speciality' element={<Doctors/>}/>
         <Route path='/login' element={<Login/>}/>
         <Route path='/about' element={<About/>}/>
         <Route path='/contact' element={<Contact/>}/>
         <Route path='/my-profile' element={<MyProfile/>}/>
-            <Route path='/my-appointments' element={<MyAppointment/>}/>
+        <Route path='/my-appointments' element={<MyAppointment/>}/>
+        <Route path='/appointment/:docId' element={<Appointment/>}/>
 
       </Routes>
      <Footer/>
-     {/* footer is mounted in app.jsx so tht it will be visible in all the pages */}
+     footer is mounted in app.jsx so tht it will be visible in all the
     </div>
   )
 }
